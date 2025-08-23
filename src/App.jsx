@@ -2,6 +2,8 @@
   import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
   import Register from './register';
   import Login from './login';
+import Profile from './profile';
+import Code from './code';
 
 
 
@@ -28,7 +30,11 @@
 
     <Routes>
       <Route path="/Register" element={<Register />} />
+      <Route path="/my/profile" element={<Profile />} />
+
       <Route path="/Login" element={<Login />} /> 
+      <Route path="/code" element={<Code />} /> 
+
     </Routes>
   </BrowserRouter>
 
