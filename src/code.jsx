@@ -9,7 +9,7 @@ function Code() {
     const userData = JSON.parse(localStorage.getItem("registerData") || "{}");
 
     if (!userData.phone || !userData.password || !userData.fullName) {
-      alert("Ro‘yxatdan o‘tish ma'lumotlari topilmadi");
+      alert("Ro'yxatdan o'tish ma'lumotlari topilmadi");
       return;
     }
 
@@ -26,10 +26,10 @@ function Code() {
         fullName: userData.fullName,
         password: userData.password
       });
-      alert("Muvaffaqiyatli ro‘yxatdan o‘tildi");
+      alert("Muvaffaqiyatli ro'yxatdan o'tildi");
       window.location.href = "/login";
     } catch (err) {
-      alert(err.response?.data?.message || "Kod noto‘g‘ri yoki serverda xatolik");
+      alert(err.response?.data?.message || "Kod noto'g'ri yoki serverda xatolik");
     }
   }
 
