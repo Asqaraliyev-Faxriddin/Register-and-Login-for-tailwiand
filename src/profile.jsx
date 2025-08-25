@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 function Profile() {
-  const [user, setUser] = useState(null); 
-  const token = localStorage.getItem("token"); 
+  let [user, setUser] = useState(null); 
+  let token = localStorage.getItem("token"); 
 
 
-  useEffect(() => {
-    if (!token) {
+    useEffect(() => {
+      if (!token) {
       window.location.href = "/login";
       return;
     }
@@ -49,8 +49,7 @@ function Profile() {
             <p><span className="font-medium">Ism:</span> {user.fullName}</p>
             <p><span className="font-medium">Telefon:</span> {user.phone}</p>
             <p><span className="font-medium">Rol:</span> {user.role}</p>
-            <p><span className="font-medium">ID:</span> {user.id}</p>
-            <p><span className="font-medium">Profil yaratilgan sanqasa:</span> {new Date(user.createdAt).toLocaleString()}</p>
+
 
           </div>
           <button 

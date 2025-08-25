@@ -2,14 +2,14 @@ import axios from "axios";
 import { useState } from "react";
 
 function Code() {
-  const [code, setCode] = useState("");
+  let [code, setCode] = useState("");
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const userData = JSON.parse(localStorage.getItem("registerData") || "{}");
+    let userData = JSON.parse(localStorage.getItem("registerData") || "{}");
 
     if (!userData.phone || !userData.password || !userData.fullName) {
-      alert("Ro'yxatdan o'tish ma'lumotlari topilmadi");
+      alert("ma'lumotlari topilmadi");
       return;
     }
 
